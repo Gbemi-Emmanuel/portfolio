@@ -13,6 +13,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+#bg-video {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -100;
+  background-image: url(../img/tm-astro-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -288,10 +303,11 @@ p {
 #hero {
   width: 100%;
   height: 100vh;
-  background:  url("../img/hero-bg.jpg") top right no-repeat;
+  background:  url("../vid/bceac8633ddcfada2291229ec1c6fcc7.gif") center;
   background-size: cover;
   position: relative;
   text-align: left;
+  background-attachment: fixed;
 }
 
 @media (min-width: 992px) {
@@ -302,7 +318,7 @@ p {
 
 #hero:before {
   content: "";
-  background: rgba(180, 180, 180, .5);
+  background: rgba(0, 0, 0, .7);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -313,6 +329,7 @@ p {
 
 #hero .container{
   z-index: 2;
+  color: var(--white)
 }
 
 #hero i{
@@ -325,18 +342,20 @@ p {
   font-weight: 700;
   line-height: 56px;
   letter-spacing: 12px;
-  color: var(--dark);
+}
+.mobile-nav-toggle{
+  color: var(--main-color-light);
+  font-size: 40px;
 }
 
 #hero p {
-  color: var(--dark);
   margin: 15px 0 0 0;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-  color: #0563bb;
+  color: var(--main-color-light);
   letter-spacing: 1px;
 }
 
@@ -347,7 +366,6 @@ p {
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: var(--dark);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -437,6 +455,9 @@ section {
   color: var(--main-color-deep);
 }
 
+.about img{
+ width: 100%;
+}
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -468,7 +489,7 @@ section {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
-.skills .progress {
+/* .skills .progress {
   height: 60px;
   display: block;
   background: none;
@@ -499,6 +520,30 @@ section {
   height: 10px;
   transition: 0.9s;
   background-color: #0563bb;
+} */
+
+.skills img {
+  margin: 20px;
+  transition: 1s;
+  padding: 20px;
+  border-radius: 30px;
+}
+/* .skills img:hover {
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 0px 30px 3.5px rgba(230, 230, 230, 2.1);
+  transform: rotate3d(360deg)
+} */
+.skills #skills-content {
+  transition: .8s;
+}
+.skills #skills-content:hover {
+  transform: rotate(360deg)
+}
+.skills img:hover {
+  width: 110px;
+  height: 110px;
+  box-shadow: 0px 0px 30px 3.5px rgba(230, 230, 230, 1.1);
 }
 
 /*--------------------------------------------------------------
